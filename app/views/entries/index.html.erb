@@ -4,7 +4,20 @@
 
 <div id="entries">
   <% @entries.each do |entry| %>
-    <%= render entry %>
+    <div class="column is-one-quarter">
+      <div class="card">
+        <header class= "card-header">
+          <%= entry.meal_type %>
+        </header>
+        <div class="card-content"
+          <div class="content">
+          <p><span class="has-text-weight-bold"><%= entry.calories %></span></p>
+          <p><span class="has-text-weight-bold"><%= entry.proteins %></span></p>
+          <p><span class="has-text-weight-bold"><%= entry.carbohydrates %></span></p>
+          <p><span class="has-text-weight-bold"><%= entry.fats %></span></p>
+    </div>
+      </div>
+        
     <p>
       <%= link_to "Show this entry", entry %>
     </p>
